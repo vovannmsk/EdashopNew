@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-//using SportsStore.Models;
+using EdaShop.Models;
 
 namespace SportsStore {
     public class Startup {
@@ -17,6 +17,9 @@ namespace SportsStore {
 
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvc();
+            services.AddTransient<iRepository, DataRepository>();
+            string conString = Configuration["ConnectionStrings:DefaultConnection"];
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(conString));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
