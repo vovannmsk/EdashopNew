@@ -1,0 +1,12 @@
+﻿<!--Поиск по товарам (элемент справа) -->
+<div class="ct-top">
+    <form action="/menu/search" method="get">
+        <div class="search">
+            <input name="keyword" id="mod_virtuemart_search" maxlength="36" alt="Search" class="inputbox" type="text" size="36" value="Поиск по меню..." onblur="if(this.value=='') this.value='Поиск по меню...';" onfocus="if(this.value=='Поиск по меню...') this.value='';" />
+            <input type="submit" value="Search" class="button" onclick="this.form.keyword.focus();" />
+        </div>
+        <input type="hidden" name="limitstart" value="0" />
+        <input type="hidden" name="option" value="com_virtuemart" />
+        <input type="hidden" name="view" value="category" />
+    </form>
+</div>

@@ -96,6 +96,8 @@ span.rur{padding-left:5px;font-family:'ALSRubl-Arial',Arial,sans-serif;line-heig
 #catalog-menu > ul.menu > li{width:14%;display:inline-block;vertical-align:top;position:relative;font-size:15px;}
 #catalog-menu > ul.menu > li > a{background:#696969;display:block;height:50px;width:100%;line-height:0.8;text-align:center;color:#fff;text-transform:uppercase;}
 #catalog-menu > ul.menu > li.active > a, #catalog-menu > ul > li > a:hover{background:#f1f1f1;color:#696969;}
+#catalog-menu > ul > li.oneRow > a{height:30px;padding-top:20px;}
+#catalog-menu > ul > li.twoRow > a{height:30px;padding-top:20px;}
 #catalog-menu > ul > li.item-149 > a{height:30px;padding-top:20px;}
 #catalog-menu > ul > li.item-264 > a{height:30px;padding-top:20px;}
 #catalog-menu > ul > li.item-265 > a{height:34px;padding:8px 0;}

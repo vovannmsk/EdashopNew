@@ -11,5 +11,6 @@ namespace EdaShop.Models
         public string NameSub { get; set; }
         public string SubDescription { get; set; }
         public Category Category { get; set; }
+        public long CategoryId { get; set; }
     }
 }

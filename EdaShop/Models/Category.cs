@@ -10,6 +10,5 @@ namespace EdaShop.Models
         public long Id { get; set; }
         public string NameCategory { get; set; }
         public string CategoryDescription { get; set; }
-
     }
 }

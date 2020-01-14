@@ -1,2 +1,203 @@
-﻿<p>tertertertert</p>
-  
+﻿
+@section Header  {
+}
+@section Body  {
+
+    <div id="content">
+
+        <div class="hr-bottom">
+            <!--  Begin "Unite Nivo Slider" -->
+            <!--большой слайдер-->
+            <div class="nivo-slider-wrapper theme-default">
+                <div id="nivo_slider_96" class="nivoSlider">
+                    <a href="stock/77-skidka-10-na-zakaz.html"><img src="~/images/slide/01.jpg" alt="01" /></a>
+                    <a href="stock/76-schastlivye-chasy.html"><img src="~/images/slide/02.jpg" alt="02" /></a>
+                    <img src="~/images/slide/05.jpg" alt="05" />
+                    <a href="stock/73-pervyj-zakaz-ot-800-r.html"><img src="~/images/slide/06.jpg" alt="06" /></a>
+                    <a href="stock/19-podarki-k-zakazu.html"><img src="~/images/slide/03.jpg" alt="03" /></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+                jQuery.noConflict();
+                jQuery(document).ready(function () {
+                    jQuery('#nivo_slider_96').show().nivoSlider({
+                        effect: 'sliceDownLeft',
+                        slices: 1,
+                        boxCols: 0,
+                        boxRows: 0,
+                        animSpeed: 500,
+                        pauseTime: 4500,
+                        startSlide: 0,
+                        directionNav: true,
+                        controlNav: false,
+                        controlNavThumbs: false,
+                        pauseOnHover: true,
+                        manualAdvance: false,
+                        prevText: 'Prev',
+                        nextText: 'Next',
+                        randomStart: false,
+                        beforeChange: function () { },
+                        afterChange: function () { },
+                        slideshowEnd: function () { },
+                        lastSlide: function () { },
+                        afterLoad: function () { }
+                    });
+                });	//ready</script>
+            <!-- Конец БОльшого слайдера -->
+            <!--  End "Unite Nivo Slider" -->
+        </div>
+
+        @Html.Partial("SearchBox")
+
+        <div class="ct-center">
+            <div id="system-message-container"></div>
+            <div class="item-page">
+                <!-- список посредине экрана (просто текст) -->
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <h1>Пицца, суши и роллы в Новомосковске «GoldFish»</h1>
+                    <p>Компания - кафе Goldfish предлагает отличное меню для доставки:</p>
+                    <ul>
+                        <li>пицца</li>
+                        <li>суши</li>
+                        <li>роллы</li>
+                        <li>лапша Wok</li>
+                        <li>супы</li>
+                        <li>салаты</li>
+                    </ul>
+                </div>
+                <!-- окончание списка посредине экрана (просто текст) -->
+                <!-- таблица 1 - 2 - 3 -->
+                <table id="mht" style="width: 100%; margin-bottom: 50px;" border="0" cellspacing="0" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td><img src="~/images/number1.png" border="0" alt="Незабываемый вкус" title="Незабываемый вкус" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+                            <td><img src="~/images/number2.png" border="0" alt="Высокое качество" title="Высокое качество" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+                            <td><img src="~/images/number3.png" border="0" alt="Быстрая доставка" title="Быстрая доставка" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><span style="font-size: x-large;">Незабываемый вкус</span></td>
+                            <td style="text-align: center;"><span style="font-size: x-large;">Высокое качество</span></td>
+                            <td style="text-align: center;"><span style="font-size: x-large;">Быстрая доставка</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- конец таблицы 1 - 2 - 3 -->
+            </div>
+        </div>
+
+        <div class="ct-bottom">
+
+            <div class="customstock">
+                <p class="font-size18 floatleft">АКЦИИ</p>
+                <p class="link-all-stock"><a href="stock">посмотреть все акции</a></p>
+                <div class="clear"> </div>
+            </div>
+
+            <div class="nspMain autoanim hover " id="nsp-stock-carusel" data-config="{
+							'animation_speed': 400,
+							'animation_interval': 8000,
+							'animation_function': 'Fx.Transitions.Quad.easeIn',
+							'news_column': 3,
+							'news_rows': 1,
+							'links_columns_amount': 0,
+							'links_amount': 0
+			}">
+                <div class="nspArts bottom" style="width:100%;">
+                    <div class="nspTopInterface">
+                        <span class="nspPrev">Предыдущая</span>
+                        <span class="nspNext">Следующая</span>
+                    </div>
+                    <div class="nspArtScroll1">
+                        <div class="nspArtScroll2 nspPages10">
+                            <div class="nspArtPage active nspCol10">
+
+                                <div class="nspArt nspCol3" style="padding:0 15px 0 15px;clear:both;">
+                                    <a href="stock/77-skidka-10-na-zakaz.html" class="nspImageWrapper tleft fnull" style="margin:0 0 0 0;" target="_self">
+                                        <img class="nspImage tleft fnull" src="~/modules/mod_news_pro_gk5/cache/sales.07stock-carusel.jpg" alt="Скидка 10% на заказ" style="width:250px;height:150px;" />
+                                        <span class="img-active"></span>
+                                    </a>
+                                    <h4 class="nspHeader tleft fnone has-image">
+                                        <a href="stock/77-skidka-10-na-zakaz.html" title="Скидка 10% на заказ" target="_self">Скидка 10% на заказ</a>
+                                    </h4>
+                                </div>
+
+                                <div class="nspArt nspCol3" style="padding:0 15px 0 15px;">
+                                    <a href="stock/76-schastlivye-chasy.html" class="nspImageWrapper tleft fnull" style="margin:0 0 0 0;" target="_self">
+                                        <img class="nspImage tleft fnull" src="~/modules/mod_news_pro_gk5/cache/sales.06stock-carusel.jpg" alt="Счастливые часы" style="width:250px;height:150px;" />
+                                        <span class="img-active"></span>
+                                    </a>
+                                    <h4 class="nspHeader tleft fnone has-image">
+                                        <a href="stock/76-schastlivye-chasy.html" title="Счастливые часы" target="_self">Счастливые часы</a>
+                                    </h4>
+                                </div>
+
+                                <div class="nspArt nspCol3" style="padding:0 15px 0 15px;">
+                                    <a href="stock/75-predvaritelnyj-zakaz.html" class="nspImageWrapper tleft fnull" style="margin:0 0 0 0;" target="_self">
+                                        <img class="nspImage tleft fnull" src="~/modules/mod_news_pro_gk5/cache/sales.01stock-carusel.jpg" alt="Предварительный заказ" style="width:250px;height:150px;" />
+                                        <span class="img-active"></span>
+                                    </a>
+                                    <h4 class="nspHeader tleft fnone has-image">
+                                        <a href="stock/75-predvaritelnyj-zakaz.html" title="Предварительный заказ" target="_self">Предварительный заказ</a>
+                                    </h4>
+                                </div>
+
+                            </div>
+                            <div class="nspArtPage nspCol10">
+
+                                <div class="nspArt nspCol3" style="padding:0 15px 0 15px;clear:both;">
+                                    <a href="stock/74-den-rozhdeniya.html" class="nspImageWrapper tleft fnull" style="margin:0 0 0 0;" target="_self">
+                                        <img class="nspImage tleft fnull" src="~/modules/mod_news_pro_gk5/cache/sales.02stock-carusel.jpg" alt="День рождения" style="width:250px;height:150px;" />
+                                        <span class="img-active"></span>
+                                    </a>
+                                    <h4 class="nspHeader tleft fnone has-image">
+                                        <a href="stock/74-den-rozhdeniya.html" title="День рождения" target="_self">День рождения</a>
+                                    </h4>
+                                </div>
+
+                                <div class="nspArt nspCol3" style="padding:0 15px 0 15px;">
+                                    <a href="stock/73-pervyj-zakaz-ot-800-r.html" class="nspImageWrapper tleft fnull" style="margin:0 0 0 0;" target="_self">
+                                        <img class="nspImage tleft fnull" src="~/modules/mod_news_pro_gk5/cache/sales.03stock-carusel.jpg" alt="Первый заказ от 800 р." style="width:250px;height:150px;" />
+                                        <span class="img-active"></span>
+                                    </a>
+                                    <h4 class="nspHeader tleft fnone has-image">
+                                        <a href="stock/73-pervyj-zakaz-ot-800-r.html" title="Первый заказ от 800 р." target="_self">Первый заказ от 800 р.</a>
+                                    </h4>
+                                </div>
+
+                                <div class="nspArt nspCol3" style="padding:0 15px 0 15px;">
+                                    <a href="stock/19-podarki-k-zakazu.html" class="nspImageWrapper tleft fnull" style="margin:0 0 0 0;" target="_self">
+                                        <img class="nspImage tleft fnull" src="~/modules/mod_news_pro_gk5/cache/sales.05stock-carusel.jpg" alt="Подарки к заказу" style="width:250px;height:150px;" />
+                                        <span class="img-active"></span>
+                                    </a>
+                                    <h4 class="nspHeader tleft fnone has-image">
+                                        <a href="stock/19-podarki-k-zakazu.html" title="Подарки к заказу" target="_self">Подарки к заказу</a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  <!-- id="content" -->
+
+}
+
+@section Footer {
+    <div class="fr-top">
+        <div id="ymaps-5e135dbee1a05" class="ymaps" style="width:100%;height:550px;"></div>
+
+        <div class="custom-contact-info">
+            <p><strong>«GoldFish»</strong> находится по адресу:</p>
+            <p>г. Новомосковск, ул. Садовского 19</p>
+            <p> </p>
+            <p><strong>Доставка еды в г. Новомосковск от «GoldFish»</strong></p>
+            <p>Режим работы: с 10:30 до 23:00</p>
+            <p> </p>
+            <p><strong>Телефоны службы доставки:</strong></p>
+            <p><a href="tel:+7(906)5300080">8 (906) 530-00-80</a></p>
+            <p><a href="tel:+7(960)5950202">8 (960) 595-02-02</a></p>
+        </div>
+    </div>
+}

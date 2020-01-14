@@ -50,7 +50,7 @@ namespace EdaShop.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    Article = table.Column<string>(nullable: true),
+                    Article = table.Column<string>(nullable: true), 
                     Image = table.Column<string>(nullable: true),
                     CategoryId = table.Column<long>(nullable: true),
                     SubCatId = table.Column<long>(nullable: true)
