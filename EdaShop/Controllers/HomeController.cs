@@ -18,18 +18,10 @@ namespace EdaShop.Controllers
         //Главная страница
         public ViewResult Index()
         {
-            //  < !--горизнтальное меню Список категорий товаров
-            //  <ul class="menu">
-            //    @//foreach (Category cat in Model)
-            //    {
-            //        <li class="oneRow">
-            //            <a asp-controller="Home" asp-action=@//cat.CategoryDescription>@//cat.NameCategory</a>
-            //        </li>
-            //    }
-            //  </ul>
-            //  <!--конец горизнтального меню Список категорий товаров-->
 
             ViewBag.Title = "Главная";
+            ViewBag.Categories = repository.Categories;
+
             return View("Index");
         }
 
@@ -42,6 +34,8 @@ namespace EdaShop.Controllers
             //                on s.Category.Id equals c.Id
             //                select new { IdSub = s.Id, NameSub = s.NameSub, DescriptionSub = s.SubDescription, CategoryId = c.Id};
             ViewBag.Title = "Пицца";
+
+            ViewBag.Categories = repository.Categories;
 
             ViewBag.Sub = from s in repository.SubCategories
                             where s.CategoryId == 1

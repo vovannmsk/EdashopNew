@@ -42,6 +42,7 @@
     <meta name="generator" content="Joomla! - Open Source Content Management" />
     <title>@ViewBag.Title</title>
     <link href="~/fav/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/style.css" type="text/css" />
     <link rel="stylesheet" href="~/css/jquery.fancybox.min.css" type="text/css" />
     <link rel="stylesheet" href="~/modules/mod_news_pro_gk5/interface/css/style.css" type="text/css" />
@@ -144,17 +145,28 @@
                     </div>
                 </div>
                 <!--конец корзины-->
-                <!--горизнтальное меню Список категорий товаров-->
+                <!--горизнтальное меню Список категорий товаров
                 <ul class="menu">
-                    <li class="item-149"><a asp-action="Pizza">Пицца</a></li>
-                    <li class="item-264"><a asp-action="Sushi">Суши</a></li>
-                    <li class="item-265"><a asp-action="Rolls">Роллы &amp; Ассорти</a></li>
-                    <li class="item-266"><a asp-action="Fastfood">ФАСТФУД</a></li>
-                    <li class="item-177"><a asp-action="Wok">Wok, Супы &amp; Салаты</a></li>
-                    <li class="item-184"><a asp-action="Desserts">Десерты &amp; Напитки</a></li>
-                    <li class="item-180"><a asp-action="Ingredients">Доп. ингред.</a></li>
+                    <li><a asp-action="Pizza">Пицца</a></li>
+                    <li><a asp-action="Sushi">Суши</a></li>
+                    <li><a asp-action="Rolls">Роллы & Ассорти</a></li>
+                    <li><a asp-action="Fastfood">ФАСТФУД</a></li>
+                    <li><a asp-action="Wok">Wok,Супы & Салаты</a></li>
+                    <li><a asp-action="Desserts">Десерты & Напитки</a></li>
+                    <li><a asp-action="Ingredients">Доп. ингред.</a></li>
                 </ul>
                 <!--конец горизнтального меню Список категорий товаров-->
+
+                <!--горизнтальное меню Список категорий товаров-->
+                <ul class="menu">
+                    @foreach (Category cat in ViewBag.Categories)
+                    {
+                        <li>
+                            <a asp-controller="Home" asp-action=@cat.CategoryDescription>@cat.NameCategory</a>
+                        </li>
+                    }
+                </ul>
+                //  <!--конец горизнтального меню Список категорий товаров-->
 
                 @RenderSection("Header")
 

@@ -29,27 +29,76 @@
                     <div id=@sub.Id.ToString()></div>
                     <h1>@sub.NameSub</h1>
                     <hr>
+                    
+                    <div class="container-fluid">
+                        <div class="row">
+                            @foreach (Product prod in Model.Where(r => r.SubCatId == sub.Id))
+                            {
 
-                    @foreach (Product prod in Model.Where(r => r.SubCatId == sub.Id))
-                    {
+                                <div class="product col-2">
+                                    <div class="pt-image">
+                                        <a title="Пицца Ассорти" data-fancybox='images' href="~/images/stories/virtuemart/product/@prod.BigImage">
+                                            <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt="Пицца Ассорти" class="browseProductImage" data-width="250" data-height="145" />
+                                        </a>
+                                    </div>
+                                    <div class="notvisible">
+                                        <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt="Пицца Ассорти" />
+                                    </div>
+                                    <div class="ptdesc-left">@prod.Description</div><!--описание поверх картинки-->
+                                    <div class="pt-description">
+                                        <h3>@prod.Name</h3>
 
-                        <div class="product ptcat">
-                            <div class="pt-image">
-                                <a title="Пицца Ассорти" rel='vm-additional-images' data-fancybox='images' href="~/images/stories/virtuemart/product/@prod.BigImage">
-                                    <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt="Пицца Ассорти" class="browseProductImage" />
-                                </a>
-                            </div>
-                            <div class="notvisible">
-                                <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt="Пицца Ассорти" />
-                            </div>
-                            <div class="ptdesc-left">@prod.Description</div>
-                            <div class="pt-description">
-                                <h3>@prod.Name</h3>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
+
+                                        <div class="ptdesc-right">
+                                            <form method="post" class="form-product">
+
+                                                <div class="addtocart-bar">
+
+                                                    <div class="pt-price">
+                                                        <div class="price-crossed"></div>
+                                                        <div class="PricesalesPrice" style="display : block;">
+                                                            <span class="PricesalesPrice">55<span class="rur">р</span></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="category-quantity-box quantity-box">
+                                                        <input type="text" class="quantity-input" name="quantity[]" value="1" />
+                                                    </span>
+                                                    <span class="category-quantity-controls quantity-controls">
+                                                        <input type="button" class="quantity-controls quantity-plus" />
+                                                        <input type="button" class="quantity-controls quantity-minus" />
+                                                    </span>
+
+
+                                                    <span class="addtocart-button">
+                                                        <input type="submit" name="addtocart" class="category-addtocart-button addtocart-button" value="Заказать" title="Заказать" />
+                                                    </span>
+                                                    <br>
+                                                    <div class="clear"></div>
+                                                </div>
+                                                <input type="hidden" class="pname" value="СЯКЕ КУНСЕЙ (лосось копченый)">
+                                                <input type="hidden" name="option" value="com_virtuemart" />
+                                                <input type="hidden" name="view" value="cart" />
+                                                <noscript><input type="hidden" name="task" value="add" /></noscript>
+                                                <input type="hidden" name="virtuemart_product_id[]" value="730" />
+                                                <input type="hidden" name="virtuemart_manufacturer_id" value="Array" />
+                                                <input type="hidden" name="virtuemart_category_id[]" value="33" />
+                                                
+                                            </form>
+                                        </div>
+
+
+
+
+
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            }
                         </div>
-                    }
+                    </div>
                 }
                 <div class="clear"></div>
                 <div class="vm-pagination">

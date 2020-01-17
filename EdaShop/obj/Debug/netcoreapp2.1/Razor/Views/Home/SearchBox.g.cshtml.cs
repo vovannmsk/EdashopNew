@@ -51,7 +51,7 @@ using EdaShop.Models;
             WriteLiteral("<!--Поиск по товарам (элемент справа) -->\r\n<div class=\"ct-top\">\r\n    ");
             EndContext();
             BeginContext(69, 673, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9422c9fdabad465d852dd7b56489be58", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1bbc4cf5b4c6402b8902bc2356d938c2", async() => {
                 BeginContext(110, 625, true);
                 WriteLiteral(@"
         <div class=""search"">
