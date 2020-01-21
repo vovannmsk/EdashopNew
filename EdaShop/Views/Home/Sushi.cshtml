@@ -61,12 +61,12 @@
 
                                 <div class="product col-2">
                                     <div class="pt-image">
-                                        <a title="Пицца @prod.Name" data-fancybox='images' href="~/images/stories/virtuemart/product/@prod.BigImage">
-                                            <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt="Пицца @prod.Name" class="browseProductImage" data-width="250" data-height="145" />
+                                        <a title="@prod.Name" data-fancybox='images' href="~/images/stories/virtuemart/product/@prod.BigImage">
+                                            <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt=@prod.Name class="browseProductImage" data-width="250" data-height="145" />
                                         </a>
                                     </div>
                                     <div class="notvisible">
-                                        <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt="Пицца @prod.Name" />
+                                        <img src="~/images/stories/virtuemart/product/resized/@prod.Image" alt=@prod.Name />
                                     </div>
                                     <div class="ptdesc-left">@prod.Description</div><!--описание поверх картинки-->
                                     <div class="pt-description">
@@ -110,6 +110,12 @@
 
                                             </form>
                                         </div>
+
+
+
+
+
+
                                         <div class="clear"></div>
                                     </div>
                                     <div class="clear"></div>

@@ -1,0 +1,66 @@
+﻿
+@section Mainmenu {
+    <div id="mobile-menu">
+        <ul class="menu">
+            <li><a asp-action="Index">Главная</a></li>
+            <li><a asp-action="Stocks">Акции</a></li>
+            <li class="active"><a asp-action="Oplata">Доставка и Оплата</a></li>
+            <li><a asp-action="Otzovik">Отзывы</a></li>
+            <li><a asp-action="Contacts">Контакты</a></li>
+        </ul>
+    </div>
+    <!--меню для компа (меню справа Главная Акции и т.д.)-->
+    <div id="main-menu">
+        <ul class="menu">
+            <li><a asp-action="Index">Главная</a></li>
+            <li><a asp-action="Stocks">Акции</a></li>
+            <li class="active"><a asp-action="Oplata">Доставка и Оплата</a></li>
+            <li><a asp-action="Otzovik">Отзывы</a></li>
+            <li><a asp-action="Contacts">Контакты</a></li>
+        </ul>
+    </div>
+}
+
+@section Header  {
+
+}
+
+@section Body  {
+    <div id="content">
+        <div class="ct-center">
+            <div id="system-message-container"></div>
+            <div class="item-page">
+                <h1>Заказ, доставка и оплата</h1>
+                <h2>ЗАКАЗ</h2>
+                <p>Прием заказов осуществляется ежедневно с 10:30 до 23:00.</p>
+                <p> </p>
+                <p><strong>1) Заказ по телефону.</strong></p>
+                <p>Вы можете сделать заказ по одному из телефонов службы доставки:</p>
+                <p><a href="tel:+7(906)5300080">8 (906) 530-00-80</a></p>
+                <p><a href="tel:+7(960)5950202">8 (960) 595-02-02</a></p>
+                <p> </p>
+                <p><strong>2) Онлайн заказ</strong></p>
+                <p>Минимальная сумма заказа 500 рублей.</p>
+                <p>Добавьте в корзину понравившиеся блюда из нашего меню, указав количество и нажав кнопку «ЗАКАЗАТЬ».</p>
+                <p>Далее перейдите в корзину и оформите заказ, заполнив все необходимые поля.</p>
+                <p>После оформления заказа через сайт в течение 10 минут вам перезвонит оператор службы доставки для подтверждения заказа.*</p>
+                <p> </p>
+                <p class="red">* если Вам не перезвонили, позвоните нам для уточнения статуса заказа по телефонам:</p>
+                <p><a class="red" href="tel:+7(906)5300080">8 (906) 530-00-80</a></p>
+                <p><a class="red" href="tel:+7(960)5950202">8 (960) 595-02-02</a></p>
+                <p> </p>
+                <h2>ДОСТАВКА</h2>
+                <p><strong>1) Курьером.</strong></p>
+                <p>Бесплатная доставка при заказе от 500 рублей по  г. Новомосковск.</p>
+                <p> </p>
+                <h2>ОПЛАТА</h2>
+                <p><strong>1) Оплата наличными курьеру</strong></p>
+                <p><strong>2) Оплата картой</strong></p>
+            </div>
+        </div>
+    </div>
+}
+
+@section Footer {
+
+}

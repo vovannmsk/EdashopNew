@@ -1,0 +1,59 @@
+﻿
+@section Mainmenu {
+    <div id="mobile-menu">
+        <ul class="menu">
+            <li><a asp-action="Index">Главная</a></li>
+            <li><a asp-action="Stocks">Акции</a></li>
+            <li><a asp-action="Oplata">Доставка и Оплата</a></li>
+            <li><a asp-action="Otzovik">Отзывы</a></li>
+            <li class="active"><a asp-action="Contacts">Контакты</a></li>
+        </ul>
+    </div>
+    <!--меню для компа (меню справа Главная Акции и т.д.)-->
+    <div id="main-menu">
+        <ul class="menu">
+            <li><a asp-action="Index">Главная</a></li>
+            <li><a asp-action="Stocks">Акции</a></li>
+            <li><a asp-action="Oplata">Доставка и Оплата</a></li>
+            <li><a asp-action="Otzovik">Отзывы</a></li>
+            <li class="active"><a asp-action="Contacts">Контакты</a></li>
+        </ul>
+    </div>
+}
+
+
+@section Header  {
+
+}
+
+@section Body  {
+    <div id="content">
+        <div class="ct-center">
+            <h1 class="contacts">Контактная информация</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <iframe src="https://yandex.ru/map-widget/v1/-/CKA9VIYv" width="620" height="400" frameborder="1" allowfullscreen="true"></iframe>
+                    </div>
+                    <div class="custom-contact-info col">
+                        <p><strong>«GoldFish»</strong> находится по адресу:</p>
+                        <p>г. Новомосковск, ул. Садовского 19</p>
+                        <p> </p>
+                        <p><strong>Доставка еды в г. Новомосковск от «GoldFish»</strong></p>
+                        <p>Режим работы: с 10:30 до 23:00</p>
+                        <p> </p>
+                        <p><strong>Телефоны службы доставки:</strong></p>
+                        <p><a href="tel:+7(906)5300080">8 (906) 530-00-80</a></p>
+                        <p><a href="tel:+7(960)5950202">8 (960) 595-02-02</a></p>
+                    </div>
+                    <div class="col-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Footer {
+
+}

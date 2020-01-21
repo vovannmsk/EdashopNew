@@ -73,11 +73,12 @@
 <body>
 
     <div id="page">
+
         <div id="header">
             <div class="hr-top"><p>Доставка пиццы, суши и роллов в Новомосковске с 10:30 до 23:00</p></div>
             <div class="hr-center">
                 <div id="logo">
-                    <a href="~/index2.html" title="Доставка пиццы, суши, роллов в Новомосковске - кафе GoldFish">
+                    <a asp-action="Index" title="Доставка пиццы, суши, роллов в Новомосковске - кафе GoldFish">
                         <img src="~/images/logo.png" alt="Доставка пиццы, суши, роллов в Новомосковске - кафе GoldFish" />
                     </a>
                 </div>
@@ -86,87 +87,64 @@
                         <a href="tel:+7(906)5300080"><b>8-906-530-0080</b></a>
                     </span>
                     <span>
-                        <a href="tel:+7(960)5950202">8-960-595-0202</a>
+                        <a href="tel:+7(960)5950202"><b>8-960-595-0202</b></a>
                     </span>
                 </div>
                 <div class="mm-shadow"></div>
                 <span class="mm-icon"></span>
-                <!-- меню для мобилы (меню справа Главная Акции и т.д.) -->
-                <div id="mobile-menu">
-                    <ul class="menu">
-                        <li class="item-291 active"><a href="index.html">Главная</a></li>
-                        <li class="item-302"><a href="stock">Акции</a></li>
-                        <li class="item-303"><a href="dostavka-i-oplata.html">Доставка и Оплата</a></li>
-                        <li class="item-304"><a href="comments.html">Отзывы</a></li>
-                        <li class="item-309"><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </div>
-                <!--меню для компа (меню справа Главная Акции и т.д.)-->
-                <div id="main-menu">
-                    <ul class="menu">
-                        <li class="item-101 current active"><a href="index.html">Главная</a></li>
-                        <li class="item-142"><a href="stock/19-podarki-k-zakazu.html">Акции</a></li>
-                        <li class="item-246"><a href="dostavka-i-oplata.html">Доставка и Оплата</a></li>
-                        <li class="item-143"><a href="comments.html">Отзывы</a></li>
-                        <li class="item-144"><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </div>
+
+                @RenderSection("Mainmenu")
+
                 <div class="clear"></div>
             </div>
 
 
-            <div id="catalog-menu">
-                <!--корзина-->
-                <div id="cart">
-                    <!-- Virtuemart 2 Ajax Card -->
-                    <div class="vmCartModule " id="vmCartModule">
-                        <div class="vmCartModule-title">Ваша корзина скучает ;)	</div>
-                        <div class="vmCartModule-total">
-                            <span class="total_products">0 шт.</span>
-                            <span class="total">на сумму : <strong>0<span class="rur">р</span></strong></span>
+            <div id="catalog-menu" class="container-fluid">
+
+                <!-- Virtuemart 2 Ajax Card КОРЗИНА
+    <div id="cart">
+        <div class="vmCartModule " id="vmCartModule">
+            <div class="vmCartModule-title">Ваша корзина скучает ;)	</div>
+            <div class="vmCartModule-total">
+                <span class="total_products">0 шт.</span>
+                <span class="total">на сумму : <strong>0<span class="rur">р</span></strong></span>
+            </div>
+            <div class="vmCartModule-moreproduct">
+                <div id="hiddencontainer" style=" display: none; ">
+                    <div class="container">
+                        <div class="prices" style="float: right;"></div>
+                        <div class="product_row">
+                            <span class="quantity"></span>&nbsp;x&nbsp;<span class="product_name"></span>
                         </div>
-                        <div class="vmCartModule-moreproduct">
-                            <div id="hiddencontainer" style=" display: none; ">
-                                <div class="container">
-                                    <div class="prices" style="float: right;"></div>
-                                    <div class="product_row">
-                                        <span class="quantity"></span>&nbsp;x&nbsp;<span class="product_name"></span>
-                                    </div>
-                                    <div class="product_attributes"></div>
-                                </div>
-                            </div>
-                            <div class="vm_cart_products">
-                                <div class="container"></div>
-                            </div>
-                            <div class="show_cart">
-                                <a style="float:right;" href="/cart">Оформить заказ</a>
-                            </div>
-                        </div>
+                        <div class="product_attributes"></div>
                     </div>
                 </div>
-                <!--конец корзины-->
-                <!--горизнтальное меню Список категорий товаров
-                <ul class="menu">
-                    <li><a asp-action="Pizza">Пицца</a></li>
-                    <li><a asp-action="Sushi">Суши</a></li>
-                    <li><a asp-action="Rolls">Роллы & Ассорти</a></li>
-                    <li><a asp-action="Fastfood">ФАСТФУД</a></li>
-                    <li><a asp-action="Wok">Wok,Супы & Салаты</a></li>
-                    <li><a asp-action="Desserts">Десерты & Напитки</a></li>
-                    <li><a asp-action="Ingredients">Доп. ингред.</a></li>
-                </ul>
-                <!--конец горизнтального меню Список категорий товаров-->
-
+                <div class="vm_cart_products">
+                    <div class="container"></div>
+                </div>
+                <div class="show_cart">
+                    <a style="float:right;" href="/cart">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--конец корзины-->
                 <!--горизнтальное меню Список категорий товаров-->
-                <ul class="menu">
+                <ul class="menu row no-gutters">
                     @foreach (Category cat in ViewBag.Categories)
                     {
-                        <li>
+                        <li class="col">
                             <a asp-controller="Home" asp-action=@cat.CategoryDescription>@cat.NameCategory</a>
                         </li>
                     }
+                    <li class="CartCart col">
+                        <a asp-action="Cart" title="Перейти в корзину" style="padding-top:0px; width:50px; margin-left:60px;">
+                            <img src="~/images/cart1.jpg" alt="Перейти в корзину" />
+                        </a>
+                    </li>
                 </ul>
-                //  <!--конец горизнтального меню Список категорий товаров-->
+
+                <!--конец горизнтального меню Список категорий товаров-->
 
                 @RenderSection("Header")
 
@@ -190,36 +168,9 @@
                 <p class="white">Copyright &copy;  2017 - 2020 goldfish-nmsk.ru </p>
             </div>
 
-            <!-- Yandex.Metrika counter
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function () {
-                try {
-                    w.yaCounter46657284 = new Ya.Metrika({
-                        id: 46657284,
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true,
-                        webvisor: true
-                    });
-                } catch (e) { }
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/46657284" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+ 
         </div> <!-- footer-->
+
     </div>
 </body>
 </html>

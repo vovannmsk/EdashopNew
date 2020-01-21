@@ -1,0 +1,113 @@
+﻿
+@section Mainmenu {
+    <div id="mobile-menu">
+        <ul class="menu">
+            <li><a asp-action="Index">Главная</a></li>
+            <li><a asp-action="Stocks">Акции</a></li>
+            <li><a asp-action="Oplata">Доставка и Оплата</a></li>
+            <li class="active"><a asp-action="Otzovik">Отзывы</a></li>
+            <li><a asp-action="Contacts">Контакты</a></li>
+        </ul>
+    </div>
+    <!--меню для компа (меню справа Главная Акции и т.д.)-->
+    <div id="main-menu">
+        <ul class="menu">
+            <li><a asp-action="Index">Главная</a></li>
+            <li><a asp-action="Stocks">Акции</a></li>
+            <li><a asp-action="Oplata">Доставка и Оплата</a></li>
+            <li class="active"><a asp-action="Otzovik">Отзывы</a></li>
+            <li><a asp-action="Contacts">Контакты</a></li>
+        </ul>
+    </div>
+}
+
+
+@section Header  {
+
+}
+
+@section Body  {
+    <div id="content">
+        <div class="ct-center">
+            <div id="system-message-container"></div>
+            <script type="text/javascript">
+                var jcomments = new JComments(1, 'com_jcomments', '/comments');
+                jcomments.setList('comments-list');
+            </script>
+            <div id="jc">
+                <h1>Отзывы о доставке "GoldFish"</h1>
+                <p>Уважаемые гости оставьте отзыв о нашей работе. Мы с радостью выслушаем Ваши пожелания и замечания. Примем их к сведению и будем стремиться к лучшим результатам.</p>
+                <p>
+                    <br>
+                    По каждому негативному отзыву проводится служебное расследование. Просим Вас внимательно относиться к написанию отзыва, указывать точную дату, время и место. Если случай не подтвержден, то отзыв не публикуется.
+                </p>
+                <p>
+                    <br>
+                    Поля "E-mail" и "Телефон" не публикуются, они нужны для связи с автором комментария и уточнения сведений при проведении служебного расследования.
+                </p>
+
+                <h4>Добавить комментарий</h4>
+                <a id="addcomments" href="#addcomments"></a>
+                <form id="comments-form" name="comments-form" action="javascript:void(null);">
+                    <p>
+                        <span>
+                            <input id="comments-form-name" type="text" name="name" value="" maxlength="30" size="22" tabindex="1" />
+                            <label for="comments-form-name">Имя (обязательное)</label>
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <input id="comments-form-email" type="text" name="email" value="" size="22" tabindex="2" />
+                            <label for="comments-form-email">E-Mail (обязательное)</label>
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <input id="comments-form-phone" type="text" name="phone" value="" size="22" tabindex="3" />
+                            <label for="comments-form-phone">Телефон (обязательное)</label>
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <input id="comments-form-title" type="text" name="title" value="" size="22" tabindex="4" />
+                            <label for="comments-form-title">Тема</label>
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <textarea id="comments-form-comment" name="comment" cols="65" rows="8" tabindex="5"></textarea>
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <input class="checkbox" id="comments-form-subscribe" type="checkbox" name="subscribe" value="1" tabindex="5" />
+                            <label for="comments-form-subscribe">Подписаться на уведомления о новых комментариях</label><br />
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img class="captcha" onclick="jcomments.clear('captcha');" id="comments-form-captcha-image" src="/comments/captcha/93311" width="121" height="60" alt="Защитный код" /><br />
+                            <span class="captcha" onclick="jcomments.clear('captcha');">Обновить</span><br />
+                            <input class="captcha" id="comments-form-captcha" type="text" name="captcha_refid" value="" size="5" tabindex="6" /><br />
+                        </span>
+                    </p>
+                    <div id="comments-form-buttons">
+                        <div class="btn" id="comments-form-send"><div><a href="#" tabindex="7" onclick="jcomments.saveComment();return false;" title="Отправить (Ctrl+Enter)">Отправить</a></div></div>
+                        <div class="btn" id="comments-form-cancel" style="display:none;"><div><a href="#" tabindex="8" onclick="return false;" title="Отменить">Отменить</a></div></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div>
+                        <input type="hidden" name="object_id" value="1" />
+                        <input type="hidden" name="object_group" value="com_jcomments" />
+                    </div>
+                </form>
+
+                <div id="comments-footer" align="center"></div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Footer {
+
+}

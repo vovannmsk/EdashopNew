@@ -15,6 +15,7 @@ namespace EdaShop.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
     }
 }
