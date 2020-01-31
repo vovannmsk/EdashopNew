@@ -101,34 +101,6 @@
 
             <div id="catalog-menu" class="container-fluid">
 
-                <!-- Virtuemart 2 Ajax Card КОРЗИНА
-    <div id="cart">
-        <div class="vmCartModule " id="vmCartModule">
-            <div class="vmCartModule-title">Ваша корзина скучает ;)	</div>
-            <div class="vmCartModule-total">
-                <span class="total_products">0 шт.</span>
-                <span class="total">на сумму : <strong>0<span class="rur">р</span></strong></span>
-            </div>
-            <div class="vmCartModule-moreproduct">
-                <div id="hiddencontainer" style=" display: none; ">
-                    <div class="container">
-                        <div class="prices" style="float: right;"></div>
-                        <div class="product_row">
-                            <span class="quantity"></span>&nbsp;x&nbsp;<span class="product_name"></span>
-                        </div>
-                        <div class="product_attributes"></div>
-                    </div>
-                </div>
-                <div class="vm_cart_products">
-                    <div class="container"></div>
-                </div>
-                <div class="show_cart">
-                    <a style="float:right;" href="/cart">Оформить заказ</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--конец корзины-->
                 <!--горизнтальное меню Список категорий товаров-->
                 <ul class="menu row no-gutters">
                     @foreach (Category cat in ViewBag.Categories)
@@ -146,9 +118,11 @@
 
                 <!--конец горизнтального меню Список категорий товаров-->
 
-                @RenderSection("Header")
+                @RenderSection("ExtraMenu")     <!--доп меню-->
 
             </div>
+
+            
 
 
         </div>   <!--  End id="header" -->

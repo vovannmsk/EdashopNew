@@ -18,8 +18,24 @@ namespace SportsStore {
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvc();
             services.AddTransient<iRepository, DataRepository>();
+            services.AddTransient<iOrderRepository, OrderRepository>();
             string conString = Configuration["ConnectionStrings:DefaultConnection"];
             services.AddDbContext<DataContext>(options => options.UseSqlServer(conString));
+
+            services.AddDistributedSqlServerCache(options =>
+                {
+                    options.ConnectionString = conString;
+                    options.SchemaName = "dbо";
+                    options.TableName = "SessionData";
+                }
+            );
+            services.AddSession(options => 
+                {
+                    options.Cookie.Name = "EdaStore.Session";
+                    options.IdleTimeout = System.TimeSpan.FromHours(48);
+                    options.Cookie.HttpOnly = false;
+                }
+            );
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<OrderProduct>
+
+@foreach (OrderCustomer order in ViewBag.Orders)
+{
+    <h3> Заказ № @order.OrderId </h3>
+    <h3> Покупатель: @order.Customer </h3>
+    <h3> Телефон: @order.Tel </h3>
+    <h3> Адрес доставки: @order.DeliveryAddress </h3>
+    <h3> Дата и время заказа: @order.Date </h3>
+    <h3> Дата и время доставки заказа: @order.DateOfDelivery </h3>
+    <form>
+        <input type="checkbox" asp-for="@order.StatusDelivery">Заказ доставлен?
+    </form>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td>Изображение товара</td>
+                <td>Наименование товара</td>
+                <td>Цена</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (OrderProduct orderline in Model.Where(s => s.Id == order.OrderId))
+            {
+            <tr>
+                <td><img src="~/images/stories/virtuemart/product/resized/@orderline.ProductImage" /> </td>
+                <td><r> @orderline.Product </r></td>
+                <td><r> @orderline.GoodsPrice </r></td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+
+    
+<hr>
+}
+

@@ -22,26 +22,25 @@
     </div>
 }
 
-@section Header  {
+@section ExtraMenu  {
     <!--доп меню-->
-    <ul class="menudop">
-        @foreach (var s in ViewBag.Sub)
-        {
-            <li>
-                <a href=@s.SubDescription>
-                    @s.NameSub
-                </a>
-            </li>
-        }
-    </ul>
-
+        <ul class="menudop row">
+            @foreach (var s in ViewBag.Sub)
+            {
+                <li>
+                    <a href=@s.SubDescription>
+                        @s.NameSub
+                    </a>
+                </li>
+            }
+        </ul>
 }
 
 @section Body  {
 
     <div id="content">
 
-        @Html.Partial("SearchBox") <!--Поиск по товарам-->
+        @Html.PartialAsync("SearchBox") <!--Поиск по товарам-->
 
         <div class="ct-center">
             <div id="system-message-container"></div>
@@ -49,7 +48,6 @@
 
                 @foreach (SubCategory sub in ViewBag.Sub)
                 {
-                    <!--<div><a name=@sub.Id.ToString()></a></div>  -->
                     <div id=@sub.Id.ToString()></div>
                     <h1>@sub.NameSub</h1>
                     <hr>

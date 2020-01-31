@@ -15,6 +15,7 @@ namespace EdaShop.Models
         public IEnumerable<Category> Categories => context.Categories.ToArray();
         public IEnumerable<SubCategory> SubCategories => context.SubCategories.ToArray();
         public IEnumerable<Customer> Customers => context.Customers.ToArray();
+        //public IEnumerable<OrderLine> Order => context.Order.ToArray();
 
         public void AddProduct(Product product)
         {
@@ -36,5 +37,10 @@ namespace EdaShop.Models
             this.context.Customers.Add(customer);
             this.context.SaveChanges();
         }
+        //public void AddOrderLine(OrderLine orderLine)
+        //{
+        //    this.context.Order.Add(orderLine);
+        //    this.context.SaveChanges();
+        //}
     }
 }

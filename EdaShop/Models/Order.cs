@@ -7,10 +7,25 @@ namespace EdaShop.Models
 {
     public class Order
     {
+        /// <summary>
+        /// номер чека (номер заказа) первичный ключ 
+        /// </summary>
         public long Id { get; set; }
-        public long CheckNumber { get; set; }    //номер чека (накладной)
+        /// <summary>
+        /// номер покупателя в справочнике товаров
+        /// </summary>
         public long CustomerId { get; set; }
-        public long ProductId { get; set; }
-        public DateTime Date { get; set; }
+        /// <summary>
+        /// Дата и время заказа
+        /// </summary>
+        public DateTime DateOrder { get; set; }
+        /// <summary>
+        /// доставлен ли товар
+        /// </summary>
+        public bool Delivered { get; set; }
+        /// <summary>
+        /// дата и время доставки
+        /// </summary>
+        public DateTime DeliveryDate { get; set; }
     }
 }
